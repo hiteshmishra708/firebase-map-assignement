@@ -1,0 +1,32 @@
+.footer {
+    z-index: 999;
+    min-width: 370px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(233, 230, 230, 0.8);
+    background-color: #fff!important;
+    position: absolute;
+    bottom: 0px;
+    height: 45px;
+    left: 0px;
+    right: 0px;
+    overflow: hidden;
+}
+
+.footer li{
+    display: inline;
+}
+
+.footer ul > li:not(:last-child):after {
+    content: " | ";
+    padding-right: .5rem;
+    padding-left: .5rem;
+}
+
+.footer .right ul > li:not(:last-child):after {
+    content: " " !important;
+}
+
+.footer .right {
+    position: absolute;
+    right: 30px;
+}

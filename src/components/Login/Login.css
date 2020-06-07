@@ -1,0 +1,10 @@
+.login-div .buttons {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.login-div {
+    padding-top: 50px;
+    width: 400px;
+    height: 400px;
+}

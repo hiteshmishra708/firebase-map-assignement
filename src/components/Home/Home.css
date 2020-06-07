@@ -1,0 +1,72 @@
+.projects {
+    padding-top: 50px;
+}
+
+
+.projects .project-list .card {
+    width: 100%;
+    padding: 10px;
+    border: none;
+}
+
+.projects .project-list .card-body:hover {
+    background-color: #344466;
+}
+
+.projects .project-list .card-body:hover label,
+.projects .project-list .card-body:hover span {
+    color: white;
+}
+
+.projects .project-list .card .card-body .card-details {
+    margin-top: 5px;
+    border-top: 1px solid rgba(152,125,70,.58);
+}
+
+
+.projects .project-list .card .card-body label {
+    display: block;
+}
+
+.projects .project-list .card .card-body span {
+    display: block;
+}
+
+.card-title.custom-label {
+    font-size: 20px !important;
+}
+
+.card-subtitle.custom-span {
+    font-size: 16px !important;
+}
+
+.card-details .custom-span {
+    font-size: 14px !important;
+    margin-top: 10px;
+}
+
+.projects .custom-modal-header label {
+    font-size: 25px;
+}
+
+.main-container {
+    height: 100%;
+    position: absolute;
+    right: 24px;
+    left: 24px;
+    overflow: auto;
+}
+
+.margin-left {
+    margin-left: 10px;
+}
+
+.card-body {
+    font-size: 14px;
+    color: grey;
+    font-family: inherit;
+    padding: 1.5rem;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,.2);
+}

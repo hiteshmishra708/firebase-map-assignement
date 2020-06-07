@@ -1,0 +1,22 @@
+.register-div .buttons {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.register-div {
+    padding-top: 50px;
+    width: 400px;
+    height: 400px;
+}
+
+.heading {
+    font-family: inherit;
+    font-size: 27px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.07;
+    letter-spacing: 0.8px;
+    text-align: left;
+    color: #25265e;
+}
