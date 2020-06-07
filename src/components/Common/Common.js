@@ -176,7 +176,7 @@ export class Modal extends Component {
                 zIndex: 99
             }
         };
-        const src = this.props.isSuccess ? 'checked.55bdf69c.svg' : 'cancel.6791a224.svg';
+        const src = this.props.isSuccess ? 'checked.svg' : 'cancel.svg';
         return (
             <ReactModal
                 isOpen={true}
