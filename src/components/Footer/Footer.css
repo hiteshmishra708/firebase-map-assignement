@@ -30,3 +30,15 @@
     position: absolute;
     right: 30px;
 }
+
+@media screen and (max-width: 600px) {
+    .footer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .center-div {
+        width: 90% !important
+    }
+}

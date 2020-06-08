@@ -28,7 +28,7 @@ class Home extends Component {
                     <Div cName="project-list row">
                         {this.props.locations.map((value, idx) => {
                             return (
-                                <Div key={idx} cName="card col-4">
+                                <Div key={idx} cName="card col-lg-4 col-md-4 col-sm-12">
                                     <Link to={"/map/" + value.id}>
                                         <Div cName="card-body">
                                             <Label cName="card-title">{ value.name }</Label>
