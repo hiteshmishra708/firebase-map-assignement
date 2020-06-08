@@ -10,6 +10,9 @@ import {
   REGISTER_REQUEST,
   REGISTER_SUCCESS,
   REGISTER_FAILURE,
+  LOCATION_REQUEST,
+  LOCATION_SUCCESS,
+  LOCATION_FAILURE,
 } from "../actions/";
 
 export default (
@@ -24,6 +27,9 @@ export default (
     user: {},
     registerError: false,
     registerSuccess: false,
+    locationError: false,
+    locationSuccess: false,
+    locations: [],
   },
   action
 ) => {
@@ -105,6 +111,30 @@ export default (
         ...state,
         registerSuccess: false,
         registerError: true,
+        loading: false
+      };
+    case LOCATION_REQUEST:
+      return {
+        ...state,
+        registerSuccess: false,
+        registerError: false,
+        locations: [],
+        loading: true
+      };
+    case LOCATION_SUCCESS:
+      return {
+        ...state,
+        locationSuccess: true,
+        locationError: false,
+        locations: action.data,
+        loading: false
+      };
+    case LOCATION_FAILURE:
+      return {
+        ...state,
+        locationSuccess: false,
+        locationError: true,
+        locations: [],
         loading: false
       };
     default:

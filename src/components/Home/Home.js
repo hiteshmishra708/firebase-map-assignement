@@ -18,6 +18,10 @@ const initialState = {
 class Home extends Component {
     state = initialState;
 
+    componentDidMount() {
+        this.props.getLocations();
+    }
+
     closeModal = () => {
         this.setState(initialState);
     }
@@ -27,18 +31,22 @@ class Home extends Component {
             <Div cName="main-container">
                 <Div cName="center-div projects container">
                     <Div cName="project-list row">
-                        {this.state.data.map((value, idx) => {
+                        {this.props.locations.map((value, idx) => {
                             return (
                                 <Div key={idx} cName="card col-4">
                                     <Div cName="card-body" onClick={() => this.onClick(value)}>
-                                        <Label cName="card-title">{ value.locationName }</Label>
-                                        <Span cName="card-subtitle">Location: {value.locationName}</Span>
+                                        <Label cName="card-title">{ value.name }</Label>
+                                        <Span cName="card-subtitle">Location: { value.name + " " + value.city}</Span>
                                         <Div cName="card-details row">
                                             <Div cName="col-6">
-                                                <Span>Lat: {value.locationLat}</Span>
+                                                <Span>Area: {value.name}</Span>
+                                                <Span>Lat: {value.state}</Span>
+                                                <Span>Lat: {value.lat}</Span>
                                             </Div>
                                             <Div cName="col-6">
-                                                <Span>Lng: {value.locationLat}</Span>
+                                                <Span>State: {value.city}</Span>
+                                                <Span>Lat: {value.country}</Span>
+                                                <Span>Lng: {value.lng}</Span>
                                             </Div>
                                         </Div>
                                     </Div>
@@ -53,8 +61,10 @@ class Home extends Component {
 }
 
 function mapStateToProps(state) {
+    console.log(state.auth)
     return {
-        isAuthenticated: state.auth.isAuthenticated
+        isAuthenticated: state.auth.isAuthenticated,
+        locations: state.auth.locations && state.auth.locations.length? state.auth.locations: []
     };
 }
   

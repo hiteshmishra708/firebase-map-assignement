@@ -55,7 +55,7 @@ class Login extends Component {
         } else {
             return (
                 <Div cName="center-div login-div">
-                    {this.state.showModal && !this.props.loading && (<Modal width="300px" height="160px" closeModal={this.closeModal} title={this.state.modalMsg} isSuccess={this.state.isSuccess} />)}
+                    {this.state.showModal && !this.props.loading && (<Modal width="300px" height="180px" closeModal={this.closeModal} title={this.state.modalMsg} isSuccess={this.state.isSuccess} />)}
                     <H1 cName="text-center login-heading">Login</H1>
                     <form onSubmit={(e) => this.submit(e)} className="login-form">
                         <Input type="text" iType="email" label="Email Address" colName="login-label" id="email" value={this.state.email} required={true} onChange={this.onChange} showError={this.state.showError} autoFocus={true} />

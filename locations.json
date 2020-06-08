@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Virar",
+        "city": "Palghar",
+        "state": "Maharashtra",
+        "country": "India",
+        "lat": "19.4564",
+        "lng": "72.7925"
+    }, {
+        "name": "NalaSopara",
+        "city": "Palghar",
+        "state": "Maharashtra",
+        "country": "India",
+        "lat": "19.4199",
+        "lng": "72.8117"
+    }, {
+        "name": "Vasai",
+        "city": "Palghar",
+        "state": "Maharashtra",
+        "country": "India",
+        "lat": "19.3919",
+        "lng": "72.8397"
+    }, {
+        "name": "Naigaon",
+        "city": "Palghar",
+        "state": "Maharashtra",
+        "country": "India",
+        "lat": "19.3429",
+        "lng": "72.8235"
+    }, {
+        "name": "Mira Road",
+        "city": "Thane",
+        "state": "Maharashtra",
+        "country": "India",
+        "lat": "19.2856",
+        "lng": "72.8691"
+    }, {
+        "name": "Bhayandar",
+        "city": "Thane",
+        "state": "Maharashtra",
+        "country": "India",
+        "lat": "19.2990",
+        "lng": "72.8548"
+    }, {
+        "name": "Dahisar",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "country": "India",
+        "lat": "19.4946",
+        "lng": "72.8604"
+    }, {
+        "name": "Goregaon",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "country": "India",
+        "lat": "19.1663",
+        "lng": "72.8526"
+    }, {
+        "name": "Borivali",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "country": "India",
+        "lat": "19.2307",
+        "lng": "72.8567"
+    }, {
+        "name": "Andheri",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "country": "India",
+        "lat": "19.1136",
+        "lng": "72.8697"
+    }
+
+]

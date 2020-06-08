@@ -1,4 +1,4 @@
-import { myFirebase } from "../firebase/firebase";
+import { myFirebase, db } from "../firebase/firebase";
 
 export const LOGIN_REQUEST = "LOGIN_REQUEST";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
@@ -14,6 +14,10 @@ export const VERIFY_SUCCESS = "VERIFY_SUCCESS";
 export const REGISTER_REQUEST = "REGISTER_REQUEST";
 export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
 export const REGISTER_FAILURE = "REGISTER_FAILURE";
+
+export const LOCATION_REQUEST = "LOCATION_REQUEST";
+export const LOCATION_SUCCESS = "LOCATION_SUCCESS";
+export const LOCATION_FAILURE = "LOCATION_FAILURE";
 
 const getAction = (type, data=null) => {
   return {
@@ -73,3 +77,18 @@ export const register = (email, password) => dispatch => {
       dispatch(getAction(REGISTER_FAILURE));
     });
 };
+
+export const getLocations = () => dispatch => {
+  dispatch(getAction(LOCATION_REQUEST));
+  db.collection('locations').get().then((querySnapshot) => {
+    const locations = []
+    querySnapshot.forEach((doc) => {
+        locations.push({ id: doc.id, ...doc.data() })
+    })
+    console.log(locations)
+    dispatch(getAction(LOCATION_SUCCESS, locations));
+  }).catch((err) => {
+    console.log('Error getting documents', err);
+    dispatch(getAction(LOCATION_FAILURE));
+  });
+}
