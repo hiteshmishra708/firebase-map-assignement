@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Header.css';
-import { Link, UL, Img, Div } from '../Common/Common';
+import { Link, UL, Div } from '../Common/Common';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/auth';
 
@@ -11,21 +11,20 @@ class Header extends Component {
             <Div cName="header">
                 <Div cName="row">
                     <Div cName="right">
-                        {this.props.isAuthenticated ? (
-                            <UL>
-                                <Link to="/">
-                                    <Img src="ava.png" alt="View Profile" cName="profile-img" />
-                                </Link>
-                                <Link to="/login" cName="logout" onClick={() => this.props.logoutUser()}>Logout</Link>
-                            </UL>
-                        ) : (
-                                <Div cName="header-list">
+                        <Div cName="header-list">
+                            {this.props.isAuthenticated ? (
+                                <UL>
+                                    <Link to="/" title="Home" cName="header-title" />
+                                    <Link to="/map" title="Map" cName="header-title" />
+                                    <Link to="/login" cName="logout header-title" onClick={() => this.props.logoutUser()}>Logout</Link>
+                                </UL>
+                            ) : (
                                     <UL>
                                         <Link to="/register" title="Register" cName="header-title" />
                                         <Link to="/login" title="Login" cName="header-title" />
                                     </UL>
-                                </Div>
-                            )}
+                                )}
+                        </Div>
                     </Div>
                 </Div>
             </Div>

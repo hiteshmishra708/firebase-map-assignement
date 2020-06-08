@@ -1,0 +1,14 @@
+.g-maps-cont {
+    padding-top: 50px;
+}
+
+
+.g-maps-cont .g-map-list .card {
+    width: 100%;
+    padding: 10px;
+    border: none;
+}
+
+#map {
+    height: 100%;
+}
